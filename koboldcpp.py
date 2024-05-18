@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 #USED FOR TRIAL PERIODS
 # Set the expiration date
-expiration_date = datetime.datetime(2024, 5, 21)
+expiration_date = datetime.datetime(2024, 4, 21)
 
 def check_license():
     if datetime.datetime.now() > expiration_date:
