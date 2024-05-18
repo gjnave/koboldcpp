@@ -14,6 +14,21 @@ import argparse
 import json, sys, http.server, time, asyncio, socket, threading
 from concurrent.futures import ThreadPoolExecutor
 
+#USED FOR TRIAL PERIODS
+# Set the expiration date
+expiration_date = datetime.datetime(2024, 5, 21)
+
+def check_license():
+    if datetime.datetime.now() > expiration_date:
+        print("Your trial period has expired.")
+        return False
+    return True
+
+# Check license validity
+if not check_license():
+    print("Exiting software.")
+    exit(1)
+
 sampler_order_max = 7
 stop_token_max = 16
 ban_token_max = 16
