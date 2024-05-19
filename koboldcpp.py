@@ -8,6 +8,7 @@
 # editing tools, save formats, memory, world info, author's note, characters,
 # scenarios and everything Kobold and Kobold Lite have to offer.
 
+import datetime
 import ctypes
 import os, math
 import argparse
